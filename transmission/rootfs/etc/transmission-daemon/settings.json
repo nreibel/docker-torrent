@@ -1,0 +1,18 @@
+{
+    "download-dir": "/public",
+    "incomplete-dir": "/public/.Incomplete",
+    "incomplete-dir-enabled": true,
+    "ratio-limit": 10,
+    "ratio-limit-enabled": true,
+    "rpc-authentication-required": true,
+    "rpc-username": "transmission",
+    "rpc-password": "transmission",
+    "rpc-whitelist": "10.1.0.*",
+    "rpc-whitelist-enabled": true,
+    "speed-limit-up": 100,
+    "speed-limit-up-enabled": true,
+    "trash-original-torrent-files": true,
+    "watch-dir": "/public",
+    "watch-dir-enabled": true,
+    "umask": 0
+}
