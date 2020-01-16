@@ -13,5 +13,5 @@ docker run \
     --name $TORRENT_NAME \
     --network $NETWORK \
     --ip 10.1.0.2 \
-    -v /public/Torrents:/public \
+    -v $TORRENT_FOLDER:/public \
     seedbox/transmission
