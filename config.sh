@@ -1,4 +1,4 @@
 NETWORK="transmission-net"
 PROXY_NAME="proxy"
-TRANSMISSION="torrent"
+TORRENT_NAME="torrent"
 VPN_LOGIN="login.conf"

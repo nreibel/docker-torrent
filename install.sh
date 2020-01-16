@@ -2,7 +2,7 @@
 
 source config.sh
 
-docker stop proxy torrent 2>/dev/null
+docker stop $PROXY_NAME $TORRENT_NAME 2>/dev/null
 
 docker system prune --all --force
 
