@@ -22,7 +22,7 @@ then
 fi
 
 # Build Proxy
-pushd ./proxy
+pushd ./alpine-proxy
 ./build.sh
 ./run.sh
 popd
