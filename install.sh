@@ -11,6 +11,11 @@ then
     docker network create -d bridge --subnet 10.1.0.0/24 $NETWORK
 fi
 
+if ! docker volume list | grep $VOLUME >/dev/null 2>&1
+then
+    docker volume create $VOLUME
+fi
+
 if [ -e $VPN_LOGIN ]
 then
     cp $VPN_LOGIN ./transmission/rootfs/etc/openvpn/pia/login.conf

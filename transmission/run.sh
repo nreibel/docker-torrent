@@ -14,4 +14,5 @@ docker run \
     --network $NETWORK \
     --ip 10.1.0.2 \
     -v $TORRENT_FOLDER:/public \
+    -v $VOLUME:/var/lib/transmission-daemon \
     seedbox/transmission

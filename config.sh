@@ -1,3 +1,4 @@
+VOLUME="transmission-data"
 NETWORK="transmission-net"
 PROXY_NAME="proxy"
 TORRENT_NAME="torrent"
