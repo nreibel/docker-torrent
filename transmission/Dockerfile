@@ -10,4 +10,6 @@ COPY rootfs/ /
 
 RUN chmod +x /root/start.sh
 
+HEALTHCHECK CMD ip a | grep -q tun0
+
 ENTRYPOINT ["/bin/bash", "-c", "/root/start.sh"]
