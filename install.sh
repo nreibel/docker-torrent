@@ -16,11 +16,6 @@ then
     docker volume create $VOLUME
 fi
 
-if [ -e $VPN_LOGIN ]
-then
-    cp $VPN_LOGIN ./transmission/rootfs/etc/openvpn/pia/login.conf
-fi
-
 cp 20-docker-transmission.conf /etc/sysctl.d/
 sysctl --system
 
@@ -31,7 +26,7 @@ pushd ./alpine-proxy
 popd
 
 # Build Transmission
-pushd ./transmission
+pushd ./alpine-transmission
 ./build.sh
 ./run.sh
 popd

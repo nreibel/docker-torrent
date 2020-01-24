@@ -1,7 +1,0 @@
-# cron syntax is <minute> <hour> <dom> <mon> <dow> <command>
-LOGFILES=/root/logs
-SHELL=/bin/sh
-PATH=/bin:/sbin:/usr/bin:/usr/sbin:usr/local/bin:/usr/local/sbin
-
-# Check on VPN status every 5 minutes
-*/5 * * * * /root/vpn.sh >$LOGFILES/vpn.log 2>&1
