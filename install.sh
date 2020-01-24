@@ -21,6 +21,9 @@ then
     cp $VPN_LOGIN ./transmission/rootfs/etc/openvpn/pia/login.conf
 fi
 
+cp 20-docker-transmission.conf /etc/sysctl.d/
+sysctl --system
+
 # Build Proxy
 pushd ./alpine-proxy
 ./build.sh
