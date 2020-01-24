@@ -2,10 +2,10 @@
 Docker images for Transmission and OpenVPN
 
 # Config
-* create a file named login.conf with the VPN user and password, separated by a new line
+* edit `/alpine-transmission/login.conf` with your VPN login
 * run `install.sh`
 
 # Todo
 - [ ] VPN Killswitch
 - [ ] Cron tasks (check VPN)
-- [ ] Use lighter container (alpine)
+- [x] Use lighter container (alpine)
