@@ -2,7 +2,7 @@
 Docker images for Transmission and OpenVPN
 
 # Config
-* edit `/alpine-transmission/login.conf` with your VPN login
+* Put your VPM login into `login.conf`
 * run `install.sh`
 
 # Todo

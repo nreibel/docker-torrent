@@ -1,5 +1,5 @@
 FROM alpine
 RUN apk update && apk upgrade && apk add curl nginx
-ADD rootfs.tar.gz /
+COPY rootfs.proxy /
 HEALTHCHECK CMD curl localhost
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
