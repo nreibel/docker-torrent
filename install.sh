@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 VOLUME="transmission-data"
 NETWORK="transmission-net"
@@ -6,7 +6,16 @@ PROXY_NAME="proxy"
 TORRENT_NAME="torrent"
 TORRENT_FOLDER="/public"
 
-# docker system prune --all --force
+if [ ! -f login.conf ]
+then
+	echo "login.conf does not exist"
+	exit 1
+fi
+
+read -p "Delete previous Docker data? (Y/n): " DELETE
+if [ "$DELETE" = "Y" ]
+then docker system prune --all --force
+fi
 
 if ! docker network list | grep $NETWORK >/dev/null 2>&1
 then docker network create -d bridge --subnet 10.1.0.0/24 $NETWORK

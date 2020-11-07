@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:latest
 RUN apk update && apk upgrade && apk add transmission-daemon openvpn sudo
 COPY rootfs.transmission /
 COPY login.conf /etc/openvpn/pia/login.conf
