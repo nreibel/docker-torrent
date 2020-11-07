@@ -7,7 +7,7 @@ IF_INTERNAL=eth0
 openvpn --config /etc/openvpn/pia/pia_nl.conf --daemon
 
 while sleep 1
-do 
+do
     if ip a | grep -q $IF_VPN
     then break;
     else echo "Waiting for $IF_VPN..."
@@ -30,6 +30,10 @@ iptables -A INPUT -i lo -j ACCEPT
 # Track any forward (NAT) data for completeness - don't care about interfaces
 iptables -A FORWARD
 
-sudo -u $USER transmission-daemon --config-dir /etc/transmission-daemon
+transmission-daemon --config-dir /etc/transmission-daemon
+
+# TODO : run as transmission user
+# chown $USER /var/lib/transmission
+# sudo -u $USER transmission-daemon --config-dir /etc/transmission-daemon
 
 /bin/sh
