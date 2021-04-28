@@ -1,7 +1,7 @@
-FROM alpine:latest
+FROM alpine:3.12
 RUN apk update && apk upgrade && apk add transmission-daemon openvpn sudo
 COPY rootfs.transmission /
 COPY login.conf /etc/openvpn/pia/login.conf
 RUN chmod +x /root/start.sh
-HEALTHCHECK CMD ip a | grep -q tun0
+HEALTHCHECK --interval=5m CMD /bin/sh -c /root/healthcheck.sh
 ENTRYPOINT ["/bin/sh", "-c", "/root/start.sh"]

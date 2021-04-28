@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.12
 RUN apk update && apk upgrade && apk add curl nginx
 COPY rootfs.proxy /
 HEALTHCHECK CMD curl localhost
